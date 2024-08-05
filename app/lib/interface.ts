@@ -4,3 +4,10 @@ export interface PostOverview {
   slug: string
   titleImage: any
 }
+
+export interface FullBlog {
+  title: string
+  bannerImage: any
+  content: any
+  createdAt: string
+}
