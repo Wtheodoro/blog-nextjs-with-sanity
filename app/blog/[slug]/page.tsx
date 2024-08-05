@@ -3,6 +3,8 @@ import { client, urlFor } from '@/app/lib/sanity'
 import { PortableText } from 'next-sanity'
 import Image from 'next/image'
 
+export const revalidate = 30 // revalidate time 30 seconds
+
 const getBlogArticle = async (slug: string) => {
   const sanityQuery = `
     *[_type == 'blog' && slug.current == '${slug}'] {
